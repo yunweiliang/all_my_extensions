@@ -1,0 +1,19 @@
+{
+    "manifest_version": 3,
+    "name": "say no to pinterest ad",
+    "version": "1.0",
+    "permissions": ["declarativeNetRequest"],
+    "host_permissions": ["<all_urls>"],
+    "declarative_net_request": {
+        "rule_resources": [
+            {"id": "ads", "enabled": true, "path": "rules.json"}
+        ]
+    },
+
+    "content_scripts": [
+        {
+            "matches": ["https://*.pinterest.com/*"],
+            "js": ["pinterest.js"]
+        }
+    ]
+}
