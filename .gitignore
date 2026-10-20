@@ -9,3 +9,5 @@ _metadata/
 # OS junk
 .DS_Store
 Thumbs.db
+
+.venv/
